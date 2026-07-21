@@ -422,6 +422,14 @@ sub initHandlers {
 			[T("<portal #>"), T("move to nearby portal")],
 			["stop", T("stop all movement")]
 			], \&cmdMove],
+		['rawmove', [
+			T("Send raw WalkToXY packet, bypassing pathfinding."),
+			[T("<x> <y>"), T("walk directly to coordinates")]
+			], \&cmdRawMove],
+		['rawattack', [
+			T("Send raw attack packet to monster by list index, bypassing AI."),
+			[T("<monster #>"), T("attack monster by index in monster list")]
+			], \&cmdRawAttack],
 		['nc', [
 			T("NPC Create."),
 			["", T("Create NPC by default name 'GOLDPCCAFE'")],
@@ -4204,6 +4212,34 @@ sub cmdMove {
 			}
 		}
 	}
+}
+
+sub cmdRawMove {
+	my (undef, $args) = @_;
+	my ($x, $y) = split(' ', $args);
+	if (!defined $x || $x !~ /^\d+$/ || !defined $y || $y !~ /^\d+$/) {
+		error "Usage: rawmove <x> <y>\n";
+		return;
+	}
+	message "RawMove: sending WalkToXY to ($x, $y)\n", "success";
+	$messageSender->sendMove(int($x), int($y));
+}
+
+sub cmdRawAttack {
+	my (undef, $args) = @_;
+	my ($idx) = split(' ', $args);
+	if (!defined $idx || $idx !~ /^\d+$/) {
+		error "Usage: rawattack <monster #>\n";
+		return;
+	}
+	my $ID = $monstersID[$idx];
+	unless ($ID && $monsters{$ID}) {
+		error "No monster at index $idx\n";
+		return;
+	}
+	my $mon = $monsters{$ID};
+	message "RawAttack: sending attack packet to $mon->{name} at ($mon->{pos_to}{x},$mon->{pos_to}{y})\n", "success";
+	$messageSender->sendAction($ID, 7);
 }
 
 sub cmdNPCList {
