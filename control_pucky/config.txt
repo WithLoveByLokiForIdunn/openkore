@@ -1,0 +1,52 @@
+master Brokkr World
+username pucky
+password pucky2026
+char 0
+server 0
+pauseCharLogin 2
+macro_orphans terminate
+
+attackAuto 0
+attackNoGiveup 0
+autoloot 0
+
+route_randomWalk 0
+route_step 10
+
+lockMap prt_fild08
+lockMap_x 0
+lockMap_y 0
+
+clientSight 14
+
+partyAuto 2
+partyAutoShare 0
+partyAutoShareItem 0
+partyAutoShareItemDiv 0
+
+follow 1
+followTarget Markus
+followDistanceMax 3
+followDistanceMin 0
+followLostTarget 0
+
+# Heal party members when HP drops below 75%
+partySkill_0 Heal
+partySkill_0_lvl 10
+partySkill_0_hp_lower 75
+partySkill_0_notPartyOnly 0
+
+# Blessing — cast when party member doesn't have it
+partySkill_1 Blessing
+partySkill_1_lvl 10
+partySkill_1_whenStatusMissing Blessed
+partySkill_1_notPartyOnly 0
+
+# Increase AGI — cast when party member doesn't have it
+partySkill_2 Increase Agility
+partySkill_2_lvl 10
+partySkill_2_whenStatusMissing Agi Up
+partySkill_2_notPartyOnly 0
+
+# Smart heal
+useSelf_skill_smartHeal 1

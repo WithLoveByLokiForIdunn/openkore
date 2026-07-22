@@ -11,7 +11,26 @@ attackNoGiveup 1
 
 autoloot 0
 
-route_randomWalk 0
-route_step 10
+route_randomWalk 1
+route_randomWalk_inSameMap 1
+route_step 15
+
+lockMap prt_fild08
+lockMap_x 0
+lockMap_y 0
+
+route_randomWalk 1
+route_randomWalk_inSameMap 1
 
 clientSight 14
+
+partyAuto 2
+partyAutoShare 0
+partyAutoShareItem 0
+partyAutoShareItemDiv 0
+
+follow 1
+followTarget Markus
+followDistanceMax 3
+followDistanceMin 2
+followLostTarget 0
