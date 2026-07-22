@@ -1,0 +1,17 @@
+# Ketzu idle chat — fires every 105s (offset from Matic), only sends if we haven't moved
+
+automacro ketzu_idle {
+	timeout 105
+	call ketzu_chat_check
+}
+
+macro ketzu_chat_check {
+	$cur = $.pos
+	if ($cur eq $last_ketzu_pos) goto ketzu_do_chat
+	$last_ketzu_pos = $cur
+	stop
+	:ketzu_do_chat
+	$last_ketzu_pos = $cur
+	$msg = @random("Reminds me of a Friday night at the bar.", "I've thrown bigger than these out on their ear.", "Markus. Just say so and I'll clear 'em out.", "Matic, you ever tended bar? Thought not.", "Back in Oklahoma they didn't even try to run.")
+	do p $msg
+}

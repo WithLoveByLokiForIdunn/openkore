@@ -1,0 +1,10 @@
+[Brokkr World]
+ip = 100.124.165.56
+port = 6900
+master_version = 1
+version = 55
+serverType = rAthena
+packetVersion = 20211103
+charBlockSize = 175
+recvpackets = recvpackets-v30.txt
+addTableFolders eA

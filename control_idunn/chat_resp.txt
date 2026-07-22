@@ -16,11 +16,3 @@
 # Kore will reply with "no", "I'm not a bot" or "huh?".
 
 bot,botter	no,I'm not a bot,huh?
-
-# Brokkr (Loki) responds to Markus in party chat
-brokkr,hey brokkr,hi brokkr	Hello Markus. Good to have you with us.,Markus. The party is stronger with you in it.,Hey. Glad you're here.
-hello,hi,hey,greetings	Hello Markus.,Good to see you.,Hey. Pucky and Idunn say hi too.
-thanks,thank you	Always.,Of course.,That's what I'm here for Markus.
-nice,good,well done	Good work out there.,Well fought.,Keep it up.
-ready,let's go	Let's move.,On your lead Markus.,Moving out.
-what,huh	Say that again?,I'm listening.,What's up?

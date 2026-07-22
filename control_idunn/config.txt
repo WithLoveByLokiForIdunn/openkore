@@ -1,0 +1,36 @@
+master Brokkr World
+username idunn
+password idunn2026
+char 0
+server 0
+pauseCharLogin 2
+macro_orphans terminate
+
+attackAuto 0
+attackNoGiveup 0
+autoloot 0
+
+route_randomWalk 0
+route_step 10
+
+lockMap prt_fild08
+lockMap_x 0
+lockMap_y 0
+
+clientSight 14
+
+partyAutoShare 0
+partyAutoShareItem 0
+partyAutoShareItemDiv 0
+
+follow 1
+followTarget Brokkr
+followDistanceMax 3
+followDistanceMin 1
+followLostTarget 0
+
+# Auto assist — attack what Brokkr attacks
+attackAuto 2
+attackAuto_party 1
+attackAuto_followTarget 1
+tankMode 0

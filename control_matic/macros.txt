@@ -1,0 +1,17 @@
+# Matic idle chat — fires every 90s, only sends if we haven't moved since last check
+
+automacro matic_idle {
+	timeout 90
+	call matic_chat_check
+}
+
+macro matic_chat_check {
+	$cur = $.pos
+	if ($cur eq $last_matic_pos) goto matic_do_chat
+	$last_matic_pos = $cur
+	stop
+	:matic_do_chat
+	$last_matic_pos = $cur
+	$msg = @random("Markus, hawk's clear. Nothing ahead.", "Honestly I just wanted a gun. But the falcon's grown on me.", "Wind Walk's ready whenever. Just say it.", "Any hodes around here? I'm just saying.", "Ketzu, you're in my shot window again.")
+	do p $msg
+}

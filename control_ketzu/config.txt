@@ -1,0 +1,60 @@
+master Brokkr World
+username ketzu
+macro_file macros.txt
+password ketzu2026
+char 0
+server 0
+pauseCharLogin 2
+macro_orphans terminate
+
+attackNoGiveup 0
+autoloot 0
+
+route_randomWalk 0
+route_step 10
+
+lockMap prt_fild08
+lockMap_x 0
+lockMap_y 0
+
+clientSight 14
+
+partyAutoShare 0
+partyAutoShareItem 0
+partyAutoShareItemDiv 0
+
+# Party invites — auto-accept, then assist Markus after 2s
+partyAuto 1
+partyAutoAccept 1
+partyAutoAssistAfterJoin 2
+
+# Follow Markus — 2-3 steps behind
+follow 1
+followTarget Markus
+followDistanceMax 3
+followDistanceMin 2
+followLostTarget 0
+
+# Attack enemies (follow target's enemies)
+attackAuto 2
+attackAuto_party 1
+attackAuto_followTarget 1
+tankMode 0
+
+# Enchant Deadly Poison self-buff
+useSelf_skill_0 Enchant Deadly Poison
+useSelf_skill_0_lvl 5
+useSelf_skill_0_whenStatusMissing Deadly Poison
+
+# Cloaking - approach enemies stealthily
+# (disabled for bot; auto-attack handles positioning)
+
+# Meteor Assault as primary AoE attack
+attackSkillSlot_0 Meteor Assault
+attackSkillSlot_0_lvl 10
+attackSkillSlot_0_maxCastsPerMonster 1
+
+# Sonic Blow for single targets
+attackSkillSlot_1 Sonic Blow
+attackSkillSlot_1_lvl 10
+attackSkillSlot_1_maxCastsPerMonster 1

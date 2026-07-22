@@ -1,0 +1,57 @@
+master Brokkr World
+username matic
+macro_file macros.txt
+password matic2026
+char 0
+server 0
+pauseCharLogin 2
+macro_orphans terminate
+
+attackNoGiveup 0
+autoloot 0
+
+route_randomWalk 0
+route_step 10
+
+lockMap prt_fild08
+lockMap_x 0
+lockMap_y 0
+
+clientSight 14
+
+partyAutoShare 0
+partyAutoShareItem 0
+partyAutoShareItemDiv 0
+
+# Party invites — auto-accept, then assist Markus after 2s
+partyAuto 1
+partyAutoAccept 1
+partyAutoAssistAfterJoin 2
+
+# Follow Markus — 2-3 steps behind
+follow 1
+followTarget Markus
+followDistanceMax 3
+followDistanceMin 2
+followLostTarget 0
+
+# Attack enemies (follow target's enemies)
+attackAuto 2
+attackAuto_party 1
+attackAuto_followTarget 1
+tankMode 0
+
+# Improve Concentration - cast when missing
+useSelf_skill_0 Improve Concentration
+useSelf_skill_0_lvl 10
+useSelf_skill_0_whenStatusMissing Concentrate
+
+# Wind Walk for party movement speed
+useSelf_skill_1 Wind Walk
+useSelf_skill_1_lvl 10
+useSelf_skill_1_whenStatusMissing Wind Walk
+
+# Sharpshooting as primary attack
+attackSkillSlot_0 Sharp Shooting
+attackSkillSlot_0_lvl 10
+attackSkillSlot_0_maxCastsPerMonster 1

@@ -1,0 +1,29 @@
+# Kore can reply with a message when someone talks to you. In this file,
+# you can configure what Kore should say when someone says something.
+#
+# Each line has the following format:
+# (words) TAB (answers)
+#
+# (words) is a comma-seperated list of words. When the message (of the
+# one who talks to Kore) contains a word that's in this list, Kore will
+# pick a random answer from (answers), which is a comma-seperated list
+# of possible answers.
+#
+# For example:
+# bot,botter	no,I'm not a bot,huh?
+#
+# When someone says something that contains the word "bot" or "botter",
+# Kore will reply with "no", "I'm not a bot" or "huh?".
+
+bot,botter	no,I'm not a bot,huh?
+
+# Responses when Markus talks to Matic
+matic,hey matic,hi matic	Ready when you are Markus., Falcon's sharp., Aye., Watching.
+ready,let's go,move out	Wind Walk's up. Lead the way., Let's go., Covering you.
+nice,good,well done,good job	Honestly I just wanted a gun., Falcon did most of the work., Yeah.,
+where,location,map	Right here Markus., Following your lead., Same map as you.
+hello,hi,greetings,hey	Matic here., Sup., Yo.
+thanks,thank you	Blame the bird., No problem., That's what I'm here for.
+hode,hodes	Oh we're fighting hodes? Good., Now we're talking., Finally some hodes.
+gun,guns,rifle	Don't even start., I know., The falcon's fine. It's fine.
+fight,attack,kill,hit	Falcon's out., On it., Taking the shot.
